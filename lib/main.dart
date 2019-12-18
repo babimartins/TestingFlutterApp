@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
-import 'location_detail.dart';
-import 'models/location.dart';
-import 'mocks/mock_location.dart';
 
-void main(){
-  final Location mockLocation = MockLocation.fetchAny();
-  return runApp(MaterialApp(
-    home: LocationDetail(mockLocation)
-  ));
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Welcome to Flutter',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Center(
+          child: Text('Hello World'),
+        ),
+      ),
+    );
+  }
 }
